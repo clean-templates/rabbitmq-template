@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+rabbitmq:
+  exchanges:
+    internal: internal.exchange
+  queues:
+    test-queue: "queue"
+  routing-keys:
+    test-key: "internal.notification.routing-key"
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  application:
+    name: test-service
